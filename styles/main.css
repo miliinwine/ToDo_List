@@ -1,0 +1,89 @@
+h1 {
+  font-size: 58px;
+  text-align: center;
+  margin-top: 80px;
+}
+.input-group {
+  width: 594px;
+  margin: 0 auto;
+  margin-top: 33px;
+  margin-bottom: 1px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0px 8px 35px 0px rgba(0, 0, 0, 0.16);
+}
+.input {
+  width: 356px;
+  height: 38px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  font-size: 16px;
+  margin: 24px 24px 25px 24px;
+  padding-left: 13.56px;
+  color: #54595e;
+}
+::placeholder {
+  color: #54595e;
+}
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+.button {
+  width: 166px;
+  height: 39px;
+  padding: 10px 16px;
+  border-radius: 4px;
+  background-color: #272829;
+  color: #fff;
+  border: none;
+}
+.task {
+  margin: 57px 0 0 24px;
+}
+ul li {
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  color: #54595e;
+  list-style-type: none;
+  margin-top: 25px;
+}
+.task__input {
+  width: 16px;
+  height: 16px;
+  margin-right: 16px;
+}
+.task__button {
+  float: right;
+  margin-right: 24px;
+  width: 16px;
+  height: 16px;
+  border: none;
+  background-color: white;
+}
+.buttons {
+  background-color: #f5f5f5;
+  border-radius: 0px 0px 16px 16px;
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 24px 18px 24px;
+}
+.button__delete {
+  width: 214px;
+  height: 39px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #6c757d;
+  border: none;
+}
+.button__delete__all {
+  width: 131px;
+  height: 39px;
+  border-radius: 4px;
+  background-color: #dc3545;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+}
