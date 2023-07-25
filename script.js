@@ -76,29 +76,10 @@ const deleteAll = () => {
 // События
 form.addEventListener("submit", addTask);
 delAll.addEventListener("click", deleteAll);
+delCompleted.addEventListener("click", deleteChecked);
 renderTodos();
-
 // Функция по удалению выбранных задач
-function box() {
-  let boxes = document.getElementsByClassName("task__input");
-  let labels = document.getElementsByTagName("label");
-  for (let i = 0; i < boxes.length; i++) {
-    if (boxes[i].checked) {
-      labels[i].classList.add("active");
-      labels[i].classList.remove("posive");
-    } else {
-      labels[i].classList.add("posive");
-      labels[i].classList.remove("active");
-    }
-  }
-}
-box();
-delCompleted.addEventListener("click", func);
-function func() {
-  let types = document.getElementsByClassName("active");
-  while (types[0]) {
-    types[0].remove();
-  }
-  renderTodos()
-}
-
+const deleteChecked = () => {
+  todos = todos.filter((el) => el.completed !== true);
+  renderTodos();
+};
