@@ -3,7 +3,7 @@ h1 {
   text-align: center;
   margin-top: 80px;
 }
-.input-group {
+.conteiner {
   width: 594px;
   margin: 0 auto;
   margin-top: 33px;
@@ -38,8 +38,8 @@ h1 {
   color: #fff;
   border: none;
 }
-.task {
-  margin: 57px 0 0 24px;
+ul {
+  margin: 32px 0 0 24px;
 }
 ul li {
   font-size: 16px;
@@ -65,11 +65,10 @@ ul li {
   background-color: #f5f5f5;
   border-radius: 0px 0px 16px 16px;
   margin-top: 32px;
-  display: flex;
   justify-content: space-between;
   padding: 18px 24px 18px 24px;
 }
-.button__delete {
+.delete__completed {
   width: 214px;
   height: 39px;
   color: #fff;
@@ -78,7 +77,7 @@ ul li {
   background-color: #6c757d;
   border: none;
 }
-.button__delete__all {
+.delete__all {
   width: 131px;
   height: 39px;
   border-radius: 4px;
@@ -86,4 +85,7 @@ ul li {
   color: #fff;
   font-size: 16px;
   border: none;
+}
+input:checked ~ span {
+  text-decoration: line-through;
 }

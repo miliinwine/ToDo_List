@@ -11,29 +11,25 @@
     <title>ToDo List</title>
   </head>
   <body>
-    <header>
-      <h1>ToDo List</h1>
-    </header>
     <main>
-      <div class="input-group">
-        <input class="input" type="text" placeholder="Добавить задачу" />
-        <button class="button">Добавить</button>
-        <div class="task">
-           <ul class="list__conteiner"></ul>
-        </div>
-        <div class="active">
-          <div class="buttons">
-            <button type="button" class="button__delete">
-              Удалить завершенные
-            </button>
-            <button type="button" class="button__delete__all">
-              Удалить все
-            </button>
-          </div>
+      <h1>ToDo List</h1>
+      <div class="conteiner">
+        <form class="form">
+          <input class="input" type="text" placeholder="Добавить задачу" />
+          <button class="button">Добавить</button>
+          <hr />
+        </form>
+        <!-- <div class="active"> -->
+          <ul class="ul"></ul>
+        <!-- </div> -->
+        <div class="buttons">
+          <button class="delete__completed">
+            Удалить завершенные
+          </button>
+          <button class="delete__all">Удалить все</button>
         </div>
       </div>
     </main>
-    <footer></footer>
     <script type="module" src="./script.js"></script>
   </body>
 </html>
