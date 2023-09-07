@@ -16,17 +16,19 @@ const showButtons = () => {
     buttons.style.display = "none";
     hr.style.display = "none";
   } else {
-    buttons.style.display = "flex";
+    buttons.style.display = "block";
     hr.style.display = "block";
   }
 };
 // Функция по созданию задач
 const drawTodo = (obj) => {
   const li = document.createElement("li");
-  li.innerHTML = `<label><input type="checkbox" class="task__input">
-                  <span class="task__text">${obj.text}</span>;
-                  <button class="task__button">❌</button></label>`;
-  const chk = li.querySelector(".task__input");
+  li.innerHTML = `<label>
+                  <input type="checkbox" class="checkbox">
+                  <span>${obj.text}</span>
+                  <button class="task__button">❌</button>
+                  </label>`;
+  const chk = li.querySelector(".checkbox");
   const del = li.querySelector(".task__button");
   chk.checked = obj.completed;
   del.addEventListener("click", () => deleteTask(obj.id));
@@ -39,6 +41,7 @@ const toggleComplete = (id) => {
   findedTodo.completed = !findedTodo.completed;
   renderTodos();
 };
+console.log(todos);
 // Функция по отображению задач
 const renderTodos = () => {
   ul.innerHTML = "";
@@ -73,13 +76,14 @@ const deleteAll = () => {
   todos = [];
   renderTodos();
 };
+
+const deleteChecked = () => {
+  todos = todos.filter((el) => el.completed !== true);
+  renderTodos();
+};
+
 // События
 form.addEventListener("submit", addTask);
 delAll.addEventListener("click", deleteAll);
 delCompleted.addEventListener("click", deleteChecked);
 renderTodos();
-// Функция по удалению выбранных задач
-const deleteChecked = () => {
-  todos = todos.filter((el) => el.completed !== true);
-  renderTodos();
-};
